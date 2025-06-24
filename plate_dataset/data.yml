@@ -1,0 +1,9 @@
+path: plate_dataset
+train: images/train
+val: images/val
+
+names:
+  0: Fork
+  1: Knife
+  2: Plate
+  3: Spoon
