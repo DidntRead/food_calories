@@ -24,6 +24,23 @@ Make sure you have **Python 3.8+** installed. Then install all required packages
 pip install -r requirements.txt
 \`\`\`
 
+## 3. Download SAM checkpoint
+
+This project uses Meta AI's **Segment Anything Model (SAM)** for food segmentation within the detected plate.
+
+You need to download the model checkpoint manually:
+
+**Checkpoint required:** `sam_vit_h_4b8939.pth`
+
+### Download from:
+
+https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
+
+Place the file in the project directory or update the path in your code:
+
+```python
+sam = sam_model_registry["vit_h"](checkpoint="sam_vit_h_4b8939.pth").cuda()
+```
 ---
 
 ## Usage
